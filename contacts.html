@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="aimz" />
+    <meta name="keywords" content="aimz" />
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+    <title>aimz</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container box_nav">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.svg" alt="logo" />
+          <p>a1mz</p>
+        </a>
+        <div class="part_nav">
+          <a href="" class="btn_page">Join Us</a>
+          <a href="" class="btn_nav2">Sign In</a>
+
+          <button class="lang">
+            <img src="./images/lang.png" alt="lang" />
+            <p>En</p>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="join">
+      <div class="container join_box">
+        <h1>Application</h1>
+        <p class="p_join">This information will let us know more about you.</p>
+        <div class="scroll_steps">
+          <div class="steps">
+            <div class="step active">
+              <div class="box">
+                <img src="./images/location.svg" alt="location" />
+              </div>
+              <h2>Branch Location</h2>
+            </div>
+            <div class="line">
+              <span style="width: 100%"></span>
+            </div>
+            <div class="step process">
+              <div class="box">
+                <img src="./images/location.svg" alt="location" />
+              </div>
+              <h2>Branch Location</h2>
+            </div>
+            <div class="line">
+              <span></span>
+            </div>
+            <div class="step">
+              <div class="box">
+                <img src="./images/location.svg" alt="location" />
+              </div>
+              <h2>Branch Location</h2>
+            </div>
+            <div class="line">
+              <span></span>
+            </div>
+            <div class="step">
+              <div class="box">
+                <img src="./images/location.svg" alt="location" />
+              </div>
+              <h2>Branch Location</h2>
+            </div>
+            <div class="line">
+              <span></span>
+            </div>
+            <div class="step">
+              <div class="box">
+                <img src="./images/location.svg" alt="location" />
+              </div>
+              <h2>Branch Location</h2>
+            </div>
+          </div>
+        </div>
+        <div class="content_join">
+          <div class="contacts">
+            <form class="row g-3">
+                <div class="col-md-12">
+                    <label for="inputName" class="form-label">Add Photo</label>
+                    
+                    <div class="imageFile">
+                        <input type="file" class="form-control" id="inputName" placeholder="Enter the name" />
+                        <img src="./images/fileimage.webp" class="camera" alt="imageFile">
+                    </div>
+                  </div>
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Enter the name" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="Enter the email"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputMobile4" class="form-label">Mobile Number</label>
+                <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                value="+201521457896"
+              />
+              </div>
+              <div class="col-md-6">
+                <label for="inputMobile5" class="form-label">WhatsApp Number</label>
+                <input
+                type="tel"
+                class="form-control"
+                id="phone2"
+                name="phone"
+                placeholder="Phone Number"
+                value="+201521457896"
+              />
+              </div>
+              <div class="col-md-6">
+                <label for="inputDate of Birth4" class="form-label">Date of Birth</label>
+                <input
+                  type="date"
+                 
+                  class="form-control"
+                  id="inputDate of Birth4"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword4"
+                  placeholder="Enter the password"
+                />
+              </div>
+            </form>
+            <form action="" class="verify">
+                <div class="box_sign">
+                    <h3 >Verify Your Email Address</h3>
+                  <p >Enter The OTP That Sent To Your Email Address</p>
+                  <form action="">
+                    <div class="passcode-wrapper">
+                        <label for="" style="margin-bottom: 8px;">OTP</label>
+                      <input
+                        id="codeBox1"
+                        type="number"
+                        maxlength="1"
+                        onkeyup="onKeyUpEvent(1, event)"
+                        onfocus="onFocusEvent(1)"
+                      />
+                      <input
+                        id="codeBox2"
+                        type="number"
+                        maxlength="1"
+                        onkeyup="onKeyUpEvent(2, event)"
+                        onfocus="onFocusEvent(2)"
+                      />
+                      <input
+                        id="codeBox3"
+                        type="number"
+                        maxlength="1"
+                        onkeyup="onKeyUpEvent(3, event)"
+                        onfocus="onFocusEvent(3)"
+                      />
+                      <input
+                        id="codeBox4"
+                        type="number"
+                        maxlength="1"
+                        onkeyup="onKeyUpEvent(4, event)"
+                        onfocus="onFocusEvent(4)"
+                      />
+                    </div>
+            
+                   
+                  </form>
+                    
+                  </div>
+            </form>
+          </div>
+        </div>
+        <div class="end_join">
+          <a href="#" class="back">Back</a>
+
+          <a href="#" class="next">Next</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer_content">
+          <p>© Aimz Academy , 2019-2022 Made by <a href="">AQuadic </a></p>
+          <div class="follow">
+            <p>Follow Us :</p>
+            <ul>
+              <li>
+                <a href="">
+                  <img src="./images/facebook.webp" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./images/linkedin.webp" alt="linkedin" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./images/instagram.webp" alt="instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./images/twitter.webp" alt="twitter" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInputField2 = document.querySelector("#phone2");
+           
+           function getIp(callback) {
+      fetch('https://ipinfo.io/41.47.128.120?token=6f23784d8e0441', { headers: { 'Accept': 'application/json' }})
+        .then((resp) => resp.json())
+        .catch(() => {
+          return {
+            country: "eg",
+          };
+        })
+        .then((resp) => callback(resp.country));
+       }
+       const phoneInput = window.intlTelInput(phoneInputField, {
+      initialCountry: "auto",
+      geoIpLookup: getIp,
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+     });
+     const phoneInput2 = window.intlTelInput(phoneInputField2, {
+      initialCountry: "auto",
+      geoIpLookup: getIp,
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+     });
+     </script>
+
+
+<script>
+    function getCodeBoxElement(index) {
+      return document.getElementById("codeBox" + index);
+    }
+    function onKeyUpEvent(index, event) {
+      const eventCode = event.which || event.keyCode;
+      if (getCodeBoxElement(index).value.length === 1) {
+        if (index !== 4) {
+          getCodeBoxElement(index + 1).focus();
+        } else {
+          getCodeBoxElement(index).blur();
+          // Submit code
+          console.log("submit code ");
+        }
+      }
+      if (eventCode === 8 && index !== 1) {
+        getCodeBoxElement(index - 1).focus();
+      }
+    }
+    function onFocusEvent(index) {
+      for (item = 1; item < index; item++) {
+        const currentElement = getCodeBoxElement(item);
+        if (!currentElement.value) {
+          currentElement.focus();
+          break;
+        }
+      }
+    }
+  </script>
+  </body>
+</html>
