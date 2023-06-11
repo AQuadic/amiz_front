@@ -665,7 +665,7 @@ line-height: 21px;
 border-radius: 10px;
 padding: 6px 12px;
 min-width: 300px;
-
+border: 1px solid #F9F9F9;
 display: flex;
 justify-content: center;
 align-items: center;
