@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="aimz" />
     <meta name="keywords" content="aimz" />
-    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
   <link rel="shortcut icon" href="./images/Icon.svg" type="image/x-icon">
     <title>aimz</title>
-
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link
       rel="stylesheet"
@@ -23,7 +22,7 @@
   <body>
     <nav>
       <div class="container box_nav">
-       <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html">
           <img src="./images/logo.svg" alt="logo" />
           <p>a1mz</p>
         </a>
@@ -38,96 +37,86 @@
         </div>
       </div>
     </nav>
-    <section class="join">
+
+
+
+    <section class="join join2">
       <div class="container join_box">
-        <h1>Application</h1>
+        <h1>Team Information</h1>
         <p class="p_join">This information will let us know more about you.</p>
         <div class="scroll_steps">
           <div class="steps">
-            <div class="step active">
-              <div class="box">
-                <img src="./images/location.svg" alt="location" />
-              </div>
-              <h2>Branch Location</h2>
-            </div>
-            <div class="line">
-              <span style="width: 100%"></span>
-            </div>
-            <div class="step  active">
-              <div class="box">
-                <img src="./images/contacts.svg" alt="contacts">
-              </div>
-              <h2>Contacts</h2>
-            </div>
-            <div class="line">
-              <span  style="width: 100%"></span>
-            </div>
-            <div class="step active">
-              <div class="box">
-                <img src="./images/Info.svg" alt="Info">
-        </div>
-        <h2>Info</h2>
-            </div>
-            <div class="line">
-              <span  style="width: 100%"></span>
-            </div>
-            <div class="step active">
-              <div class="box">
-                <img src="./images/parents.svg" alt="parents">
-        </div>
-        <h2>Parents Information</h2>
-            </div>
-            <div class="line">
-              <span></span>
-            </div>
             <div class="step process">
               <div class="box">
-                <img src="./images/healthcare2.svg" alt="healthcare">
-        </div>
-        <h2>Medical Concerns</h2>
+                <img src="./images/basic.svg" alt="Basic Information" />
+              </div>
+              <h2>Basic Information</h2>
             </div>
+            <div class="line">
+              <span style="width: 50%"></span>
+            </div>
+            <div class="step ">
+              <div class="box">
+                  <img src="./images/Kits-Color.svg" alt="Kits Color">
+              </div>
+              <h2>Kits Color</h2>
+          </div>
+          <div class="line">
+              <span ></span>
+          </div>
+          <div class="step ">
+              <div class="box">
+                  <img src="./images/Coaches-Information.svg" alt="Coaches Information">
+              </div>
+              <h2>Coaches Information</h2>
+          </div>
+          <div class="line">
+              <span></span>
+          </div>
+          <div class="step ">
+              <div class="box">
+                  <img src="./images/Team-Captain.svg" alt="Team Captain">
+              </div>
+              <h2>Team Captain</h2>
+          </div>
           </div>
         </div>
         <div class="content_join">
-          <div class="info">
+          <div class="contacts">
             <form class="row g-3">
-              <div class="col-md-12">
-                <label for="input4" class="form-label"
-                  >Does your daughter have any medical concerns we should be
-                  aware of?</label
-                >
+                <div class="col-md-12">
+                    <label for="inputName" class="form-label">Add Photo</label>
+                    
+                    <div class="imageFile">
+                        <input type="file" class="form-control" id="inputName" placeholder="Enter the name" />
+                        <img src="./images/fileimage.webp" class="camera" alt="imageFile">
+                    </div>
+                  </div>
+              <div class="col-md-6">
+                <label for="inputTeamName" class="form-label">Team Name</label>
+                <input type="text" class="form-control" id="inputTeamName" placeholder="Enter the name" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputSchoolName" class="form-label">School Name</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="input4"
-                  placeholder="Select the name"
+                  id="inputSchoolName"
+                  placeholder="Enter the name"
                 />
               </div>
-              <div class="col-md-12">
-                <label for="inputClub4" class="form-label"
-                  >If so, Is she taking Any medications that may affect her in
-                  traning?</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputClub4"
-                  placeholder="Select the name"
-                />
-              </div>
-              <p style="font-size: 14px; line-height: 18px; color: #8d8d8d">
-                We’ll contact with you as soon as possible
-              </p>
+              
             </form>
+         
           </div>
         </div>
-        <div class="end_join">
-          <a href="parents.html" class="back">Back</a>
-
-          <a href="success.html" class="next">Submit</a>
-        </div>
+        <div class="end_join end_join1">
+          <a href="Kit-Color.html" class="next">Next</a>
+      </div>
       </div>
     </section>
+
+
 
     <footer>
       <div class="container">
@@ -164,5 +153,19 @@
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+      // Get all the divs
+var $divs = $('.location');
+
+// Add a click event listener to each div
+$divs.on('click', function() {
+  // Remove the "active" class from all divs
+  $divs.removeClass('active');
+  
+  // Add the "active" class to the clicked div
+  $(this).addClass('active');
+}); 
+
+    </script>
   </body>
 </html>

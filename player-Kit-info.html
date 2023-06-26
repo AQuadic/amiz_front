@@ -7,9 +7,8 @@
     <meta name="description" content="aimz" />
     <meta name="keywords" content="aimz" />
     <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
-  <link rel="shortcut icon" href="./images/Icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/Icon.svg" type="image/x-icon" />
     <title>aimz</title>
-
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link
       rel="stylesheet"
@@ -23,7 +22,7 @@
   <body>
     <nav>
       <div class="container box_nav">
-       <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html">
           <img src="./images/logo.svg" alt="logo" />
           <p>a1mz</p>
         </a>
@@ -38,93 +37,87 @@
         </div>
       </div>
     </nav>
-    <section class="join">
+    <section class="join join3">
       <div class="container join_box">
-        <h1>Application</h1>
+        <h1>Player Information</h1>
         <p class="p_join">This information will let us know more about you.</p>
         <div class="scroll_steps">
           <div class="steps">
             <div class="step active">
               <div class="box">
-                <img src="./images/location.svg" alt="location" />
+                <img src="./images/basic.svg" alt="Basic Information" />
               </div>
-              <h2>Branch Location</h2>
+              <h2>Basic Information</h2>
             </div>
             <div class="line">
               <span style="width: 100%"></span>
             </div>
-            <div class="step  active">
-              <div class="box">
-                <img src="./images/contacts.svg" alt="contacts">
-              </div>
-              <h2>Contacts</h2>
-            </div>
-            <div class="line">
-              <span  style="width: 100%"></span>
-            </div>
-            <div class="step active">
-              <div class="box">
-                <img src="./images/Info.svg" alt="Info">
-        </div>
-        <h2>Info</h2>
-            </div>
-            <div class="line">
-              <span  style="width: 100%"></span>
-            </div>
-            <div class="step active">
-              <div class="box">
-                <img src="./images/parents.svg" alt="parents">
-        </div>
-        <h2>Parents Information</h2>
-            </div>
-            <div class="line">
-              <span></span>
-            </div>
             <div class="step process">
               <div class="box">
-                <img src="./images/healthcare2.svg" alt="healthcare">
-        </div>
-        <h2>Medical Concerns</h2>
+                <img src="./images/Kits-Color2.svg" alt="Kits Information" />
+              </div>
+              <h2>Kits Information</h2>
             </div>
           </div>
         </div>
         <div class="content_join">
-          <div class="info">
-            <form class="row g-3">
+          <div class="contacts">
+            <form class="row g-3" style="max-width: 490px;">
+             
               <div class="col-md-12">
-                <label for="input4" class="form-label"
-                  >Does your daughter have any medical concerns we should be
-                  aware of?</label
+                <label for="inputKitName" class="form-label"
+                  >Kit Name</label
                 >
                 <input
                   type="text"
                   class="form-control"
-                  id="input4"
-                  placeholder="Select the name"
+                  id="inputKitName"
+                  placeholder="Enter the name"
                 />
               </div>
               <div class="col-md-12">
-                <label for="inputClub4" class="form-label"
-                  >If so, Is she taking Any medications that may affect her in
-                  traning?</label
+                <label for="inputKit Number" class="form-label"
+                  >Kit Number</label
                 >
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  id="inputClub4"
-                  placeholder="Select the name"
+                  id="inputKit Number"
+                  placeholder="Enter the number"
                 />
               </div>
-              <p style="font-size: 14px; line-height: 18px; color: #8d8d8d">
-                We’ll contact with you as soon as possible
-              </p>
+
+              <div class="col-md-12">
+                <label for="inputKitSize" class="form-label"
+                  >Kit Size</label
+                >
+                <select id="inputKitSize" class="form-select">
+                  <option selected>select the size</option>
+                  <option>42</option>
+                  <option>38</option>
+                </select>
+              </div>
+              <div class="col-md-12">
+                <label for="inputSize" class="form-label"
+                  >Hoodie Size</label
+                >
+                <select id="inputSize" class="form-select">
+                  <option selected>select the size</option>
+                  <option>42</option>
+                  <option>38</option>
+                </select>
+              </div>
             </form>
+            <div class="t-shert-color">
+                <img src="./images/t-shert.webp" alt="t-shert">
+                
+            </div>
           </div>
         </div>
-        <div class="end_join">
-          <a href="parents.html" class="back">Back</a>
+        <div class="end_join ">
+          <a href="player-Basic-Info.html" class="back">Back</a>
 
-          <a href="success.html" class="next">Submit</a>
+          <a href="" class="next">Submit</a>
         </div>
       </div>
     </section>
@@ -164,5 +157,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
+   
   </body>
 </html>
