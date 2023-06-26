@@ -951,6 +951,22 @@ color: #8D8D8D;
   align-items: center;
   gap: 16px;
 }
+.dashboard_admin .dashboard-box .part1 .admin .backBtn{
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  background-color: #E6F1FF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard_admin .dashboard-box .part1 .admin .backBtn img{
+  width: 12px;
+}
+html[dir=rtl] .dashboard_admin .dashboard-box .part1 .admin .backBtn img{
+  transform: rotate(180deg);
+}
 .dashboard_admin .dashboard-box .part1 .admin .img_admin{
   width: 100px;
 height: 100px;
@@ -986,6 +1002,7 @@ height: 24px;
 }
 .dashboard_admin .dashboard_links{
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 .dashboard_admin .dashboard_links ul{
   display: flex;
@@ -1090,6 +1107,26 @@ padding: 16px 22px;
 border-radius: 20px;
 border: 1px solid #E9E9E9;
 max-width: 100%;
+position: relative;
+}
+.dashboard_admin .dashboard-box .part2 .player .part_info .edit-staff{
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  width: 26px;
+height: 26px;
+border-radius: 5px;
+border: 1px solid var(--main_color);
+background-color: transparent;
+}
+html[dir=rtl] .dashboard_admin .dashboard-box .part2 .player .part_info .edit-staff{
+  top: 16px;
+  left: 22px;
+  right: auto;
+}
+.dashboard_admin .dashboard-box .part2 .player .part_info .edit-staff img{
+  width: 17px;
+height: 17px;
 }
 .dashboard_admin .dashboard-box .part2 .player .part_info h4{
   color: #777;
@@ -1139,7 +1176,28 @@ line-height: 16px;
   flex: 1;
   min-width: 46%;
  }
-
+ .dashboard_admin .dashboard-box .part2 .t-sherts{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+ }
+ .dashboard_admin .dashboard-box .part2 .t-sherts .part{
+  flex: 1;
+ }
+ .dashboard_admin .dashboard-box .part2 .t-sherts .part h3{
+  font-size: 20px;
+  font-family: "DM Sans";
+line-height: 16px;
+text-align: center;
+margin-bottom: 12px;
+ }
+ .dashboard_admin .dashboard-box .part2 .t-sherts .part img{
+  max-width: 100%;
+  margin: auto;
+  display: block;
+ }
 @media(max-width:768px){
   .dashboard_admin .dashboard-box .part2 .players {
    
@@ -1168,6 +1226,9 @@ line-height: 16px;
   margin: 40px auto 0px;
  
 }
+.dashboard_admin .dashboard-box .part2 .t-sherts {
+ flex-direction: column;
+}
 }
 @media(max-width:450px){
   .dashboard_admin .dashboard-box .part2 .players li{
@@ -1178,5 +1239,53 @@ line-height: 16px;
     flex: 1;
     min-width: 50%;
 }
+.modal-body {
+  
+  padding: 0;
+}
+}
+@media (min-width: 640px){
+.modal-dialog.modal-dialog1 {
+    max-width: 640px;
+   margin: 0;
+   margin-left: auto;
+}
+html[dir=rtl] .modal-dialog.modal-dialog1 {
+ 
+ margin-left: 0;
+ margin-right: auto;
+}
 }
 /*end dashboard_admin*/
+.modal *{
+  color: #000;
+}
+.modal-header {
+  border: none;
+  padding: 0;
+}
+.modal-header .btn-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 10000;
+}
+.modal-dialog2{
+  max-width: 873px;
+  
+}
+.modal-dialog2 .btn_page2{
+  border-radius: 10px;
+width: 464px;
+height: 60px;
+max-width: 100%;
+
+margin: 90px auto 20px;
+}
+.modal input:not([type=radio]) {
+  background: #FFFFFF;
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  height: 50px;
+  max-width: 100%;
+}

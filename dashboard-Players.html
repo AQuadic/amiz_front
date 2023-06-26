@@ -11,6 +11,11 @@
     <title>aimz</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
       integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
@@ -47,7 +52,7 @@
     <p>Victoria Collage </p>
 </div>
         </div>
-        <button class="admin-edit">
+        <button class="admin-edit" >
 <img src="./images/edit.svg" alt="edit">
         </button>
        </div>
@@ -61,7 +66,7 @@
         <a href="dashboard-Staff.html">Staff</a>
     </li>
     <li>
-        <a href="">Kits</a>
+        <a href="dashboard-Kits.html">Kits</a>
     </li>
 </ul>
        </div>
@@ -165,7 +170,7 @@
 
                 </li>
             </ul>
-            <a href="" class="add_player">Add New Player</a>
+            <a href="" class="add_player" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Player</a>
         </div>
 
        </div>
@@ -205,10 +210,286 @@
         </div>
       </div>
     </footer>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog1" >
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <section class="join join3" style="background: white; padding: 0;">
+          <div class="container join_box">
+            <h1>Player Information</h1>
+            <p class="p_join">This information will let us know more about you.</p>
+            <div class="scroll_steps">
+              <div class="steps">
+                <div class="step process">
+                  <div class="box">
+                    <img src="./images/basic.svg" alt="Basic Information" />
+                  </div>
+                  <h2>Basic Information</h2>
+                </div>
+                <div class="line">
+                  <span style="width: 50%"></span>
+                </div>
+                <div class="step">
+                  <div class="box">
+                    <img src="./images/Kits-Color.svg" alt="Kits Information" />
+                  </div>
+                  <h2>Kits Information</h2>
+                </div>
+              </div>
+            </div>
+            <div class="content_join">
+              <div class="contacts">
+                <form class="row g-3">
+                  <div class="col-md-12">
+                    <label for="inputName" class="form-label">Add Photo</label>
+    
+                    <div class="imageFile">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputName"
+                        placeholder="Enter the name"
+                      />
+                      <img
+                        src="./images/fileimage.webp"
+                        class="camera"
+                        alt="imageFile"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputFather" class="form-label"
+                      >Father’s Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputFather"
+                      placeholder="Select the name"
+                    />
+                  </div>
+    
+                  <div class="col-md-12">
+                    <label for="inputMobile4" class="form-label"
+                      >Mobile Number</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone Number"
+                     
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputDate of Birth4" class="form-label"
+                      >Date of Birth</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="inputDate of Birth4"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputClub" class="form-label">Club</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputClub"
+                      placeholder="Enter the name"
+                    />
+                  </div>
+                 
+                  <div class="col-md-12">
+                    <label for="inputNationality" class="form-label"
+                      >Player Position</label
+                    >
+                    <select id="inputNationality" class="form-select">
+                      <option selected>Select the position</option>
+                      <option>back right</option>
+                      <option>back left</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="">Player or Goalkeeper</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Player
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        GoalKeeper
+                      </label>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+            <div class="end_join end_join1">
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal2" class="next">Next</button>
+            </div>
+          </div>
+        </section>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog1" >
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <section class="join join3" style="background: white; padding: 0;">
+          <div class="container join_box">
+            <h1>Player Information</h1>
+            <p class="p_join">This information will let us know more about you.</p>
+            <div class="scroll_steps">
+              <div class="steps">
+                <div class="step active">
+                  <div class="box">
+                    <img src="./images/basic.svg" alt="Basic Information" />
+                  </div>
+                  <h2>Basic Information</h2>
+                </div>
+                <div class="line">
+                  <span style="width: 100%"></span>
+                </div>
+                <div class="step process">
+                  <div class="box">
+                    <img src="./images/Kits-Color2.svg" alt="Kits Information" />
+                  </div>
+                  <h2>Kits Information</h2>
+                </div>
+              </div>
+            </div>
+            <div class="content_join">
+              <div class="contacts" style="flex-direction: column-reverse;">
+                <form class="row g-3" style="max-width: 490px;">
+                 
+                  <div class="col-md-12">
+                    <label for="inputKitName" class="form-label"
+                      >Kit Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputKitName"
+                      placeholder="Enter the name"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputKit Number" class="form-label"
+                      >Kit Number</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputKit Number"
+                      placeholder="Enter the number"
+                    />
+                  </div>
+    
+                  <div class="col-md-12">
+                    <label for="inputKitSize" class="form-label"
+                      >Kit Size</label
+                    >
+                    <select id="inputKitSize" class="form-select">
+                      <option selected>select the size</option>
+                      <option>42</option>
+                      <option>38</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputSize" class="form-label"
+                      >Hoodie Size</label
+                    >
+                    <select id="inputSize" class="form-select">
+                      <option selected>select the size</option>
+                      <option>42</option>
+                      <option>38</option>
+                    </select>
+                  </div>
+                </form>
+                <div class="t-shert-color">
+                    <img src="./images/t-shert.webp" alt="t-shert">
+                    
+                </div>
+              </div>
+            </div>
+            <div class="end_join ">
+              <button data-bs-toggle="modal" data-bs-dismiss="modal" class="back">Back</button>
+    
+              <a href="" class="next">Submit</a>
+            </div>
+          </div>
+        </section>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
 
-   
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+    
+         
+         function getIp(callback) {
+    fetch('https://ipinfo.io/41.47.128.120?token=6f23784d8e0441', { headers: { 'Accept': 'application/json' }})
+      .then((resp) => resp.json())
+      .catch(() => {
+        return {
+          country: "eg",
+        };
+      })
+      .then((resp) => callback(resp.country));
+     }
+     const phoneInput = window.intlTelInput(phoneInputField, {
+    initialCountry: "auto",
+    geoIpLookup: getIp,
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+  
+   </script>
   </body>
 </html>
