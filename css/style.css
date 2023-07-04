@@ -115,6 +115,7 @@ line-height: 21px;
 font-family: "DM Sans";
 border: 1px solid #FFFFFF;
 border-radius: 5px;
+background-color: transparent;
 }
 nav .box_nav .navbar-brand{
   display: flex;
@@ -539,6 +540,9 @@ gap: 14px;
   padding-bottom: 100px;
   color: black !important;
   padding-top: 100px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .join *{
   color: black ;
@@ -918,7 +922,7 @@ color: #8D8D8D;
  
 }
 .join .join_box {
- 
+  border-radius: 14px;
   max-width: 96%;
 }
 .join3 .contacts{
@@ -1252,6 +1256,122 @@ margin-bottom: 12px;
 
 }
 /*end dashboard_admin*/
+
+
+/*start signUp*/
+.signUp{
+  background-image: url('../images/backSignUp.webp');
+}
+.join.signUp h1{
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: "DM Sans";
+
+}
+.join.signUp .p_signUp ,.join.signUp .p_signUp2{
+  color: #A1A1A1;
+text-align: center;
+font-size: 16px;
+font-family: "DM Sans2";
+margin-bottom: 16px;
+width: 452px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+.join.signUp .p_signUp2{
+  color: #5F5D5D;
+text-align: center;
+font-family: "DM Sans3";
+font-size: 16px;
+}
+.signUp .content_signUp form{
+  max-width: 490px;
+  margin: auto;
+}
+.join.signUp .join_box {
+  padding: 42px 44px 44px;
+  max-width: 880px;
+}
+.signUp .btn_page2{
+  max-width: 90%;
+  border-radius: 10px;
+  margin: 56px auto 0px;
+  height: 60px;
+}
+.signUp .content_signUp form .forget{
+  color: var(--main_color);
+font-size: 14px;
+font-family: "DM Sans";
+text-decoration-line: underline;
+text-align: end;
+display: block;
+}
+.signUp .content_signUp form .back{
+  color: var(--main_color);
+  font-size: 15px;
+  font-family: "DM Sans";
+  text-decoration-line: underline;
+  text-align: center;
+  display: block;
+  margin-top: 24px;
+}
+.signUp .passcode-wrapper .inputs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  flex: 1;
+}
+.signUp .passcode-wrapper input{
+  width: 90px;
+  height: 62px !important;text-align: center;
+  border-radius: 10px !important;
+}
+.signUp .counter {
+  font-size: 14px;
+  line-height: 18px;
+  color: #157e0c;
+  text-align: center;
+  margin: 34px auto 12px;
+}
+.join.signUp  .counter.red {
+  color: #da300a;
+}
+.signUp form h4 button {
+  background-color: transparent;
+  border: none;
+  color: #bebcd4;
+  font-family: "DM Sans";
+}
+.join.signUp  h4 button.resend {
+  color: #ea4c1a;
+  text-decoration: underline;
+}
+.join.signUp form h4 {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  font-family: "DM Sans3";
+}
+@media (max-width: 768px){
+  .join.signUp .join_box {
+    padding: 26px 16px 30px;
+    max-width: 96%;
+}
+.join.signUp h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+ 
+}
+.signUp .btn_page2 {
+  max-width: 75%;
+  margin: 28px auto 0px;
+  height: 52px;
+}
+}
+/*end signUp*/
+
 .modal *{
   color: #000;
 }
