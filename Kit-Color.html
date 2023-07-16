@@ -85,8 +85,10 @@
             <form class="row g-3">
                 
               <div class="col-md-12">
-                <label for="inputTeamName" class="form-label">Color of Primary Kit </label>
-                <input type="text" class="form-control" id="inputTeamName" placeholder="Enter the name" />
+                <label for="exampleColorInput" class="form-label">Color of Primary Kit </label>
+                <input type="text" class="form-control" id="exampleColorInput" data-bs-toggle="modal" data-bs-target="#exampleModal"  readonly/>
+               
+             
               </div>
               <div class="col-md-12">
                 <label for="inputSchoolName" class="form-label">Color of Secandary Kit </label>
@@ -109,9 +111,6 @@
           </div>
       </div>
     </section>
-
-
-
     <footer>
       <div class="container">
         <div class="footer_content">
@@ -144,6 +143,24 @@
         </div>
       </div>
     </footer>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 320px;margin: auto;">
+    <div class="modal-content" style="background: none;
+    border: none;">
+    
+      <div class="modal-body">
+        <div id="boxColor" class="boxColor">
+          <div id="colorpicker">
+  
+          </div>
+         
+          </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -161,5 +178,86 @@ $divs.on('click', function() {
 }); 
 
     </script>
+    <script>
+      // define html elements
+const circle2 = document.getElementById('exampleColorInput');
+const lilcircles = document.getElementsByClassName("lilcircle");
+const colorpicker = document.getElementById('colorpicker');
+let ricon = ''; 
+
+//function to fill out copyable html and css
+let generateCode = function (backgroundColor = null, textshadow = null) {
+    let htmlstr = `<div class="iconcircle"><i class="material-icons shadowicon">${ricon}</i></div>`
+    if (backgroundColor || textshadow) {
+        let cssstr = `.iconcircle{display:flex;align-items:center;justify-content:center;height:80px;width:80px;background-color:${backgroundColor};overflow:hidden;border-radius:50%}.iconcircle .shadowicon{color:#fff;font-size:45px;text-shadow:${textshadow}}`
+   console.log(backgroundColor);
+   circle2.style.background=backgroundColor
+      }
+}
+//Grab Material Colors and Parse JSON object
+let googleColors = null;
+var data = null;
+var xhr = new XMLHttpRequest();
+xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === 4) {
+        googleColors = JSON.parse(this.responseText);
+        //create preview swatches
+        for (var color in googleColors) {
+            for (var subcolor in googleColors[color]) {
+                if (subcolor == '400' || subcolor == '500' || subcolor == '600') {
+                    let shadowcolor = parseInt(subcolor) + 300;
+                    let shadowhex = googleColors[color][shadowcolor]
+                    let bgtitle = color + ' ' + subcolor;
+                    let shadowtitle = color + ' ' + shadowcolor;
+                    let el = document.createElement('div');
+                    let htmlString = `<div class="lilcircle" style="background-color: ${googleColors[color][subcolor]};" data-shadow="${shadowhex}" data-bgtitle="${bgtitle}" data-shadowtitle="${shadowtitle}" data-color="${googleColors[color][subcolor]}"></div>`
+                    el.innerHTML = htmlString.trim();
+                    colorpicker.appendChild(el);
+                    el.classList.add('colorp');
+                    el.setAttribute("data-bs-dismiss","modal")
+                    /*==*/
+                }
+            }
+        }
+        //set background of circle as color of selected cricle and shadow color
+        for (var i = 0; i < lilcircles.length; i++) {
+            lilcircles[i].addEventListener('click', function () {
+                for (var i = 0; i < lilcircles.length; i++) {
+                    lilcircles[i].classList.remove('active');
+                }
+                this.classList.add('active');
+                //generate text-shadow string and add it onclick!
+                let textshadowstring = '';
+                for (i = 1; i < 120; i++) {
+                    textshadowstring += i + 'px ' + i + 'px ' + this.getAttribute('data-shadow') + ',';
+                }
+                textshadowstring = textshadowstring.substring(0, textshadowstring.length - 1);
+                //change the code to copy
+                generateCode(this.style['background-color'], textshadowstring);
+            });
+        }
+        //trigger click on an element
+        document.getElementsByClassName('lilcircle')[Math.floor(Math.random() * 56) + 1].click();
+    }
+});
+xhr.open("GET", "https://gist.githubusercontent.com/kawanet/a880c83f06d6baf742e45ac9ac52af96/raw/b4fbc9a730394eb977277e73cc37b60955463f21/material-colors.json");
+xhr.send(data);
+//grab random icon
+let icons = [];
+var icon_data = null;
+var xhr_icon = new XMLHttpRequest();
+let grabRandomIcon = function () {
+    let randomicon = icons[Math.floor(Math.random() * icons.length)];
+    ricon = randomicon.split(" ")[0];
+    generateCode();
+    return ricon;
+}
+xhr_icon.addEventListener("readystatechange", function () {
+    if (this.readyState === 4) {
+        icons = this.responseText.split("\n");
+        icon.innerHTML = grabRandomIcon();
+    }
+});
+   </script>
   </body>
 </html>

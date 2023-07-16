@@ -1404,3 +1404,87 @@ margin: 90px auto 20px;
   height: 50px;
   max-width: 100%;
 }
+/**-==========================*/
+#colorpicker {
+  height: 400px;
+  width: 300px;
+  background-color: rgb(53, 53, 53);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+#example {
+  margin: 40px;
+}
+
+#colorpicker .colorp {
+  width: 16.666%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#exampleColorInput{
+  cursor: pointer;
+}
+
+
+#colorpicker .colorp .lilcircle {
+  height: 30px;
+  width: 30px;
+  transform: scale(.7);
+  background-color: #008fee;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+#colorpicker .colorp .lilcircle:hover,
+#colorpicker .colorp .lilcircle.active {
+  transform: scale(1);
+  transition: all .5s ease;
+}
+
+#colorpicker #example {
+  height: 400px;
+  width: 300px;
+  background-color: rgb(53, 53, 53);
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#circle {
+  background-color: #6200EE;
+  width: 180px;
+  z-index: 1;
+  position: relative;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#circle i {
+  font-size: 100px;
+  color: white;
+}
+
+#icon {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 740px) {
+  .copycontainer {
+      display: none;
+  }
+}
