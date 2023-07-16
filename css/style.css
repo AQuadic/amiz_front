@@ -1408,7 +1408,7 @@ margin: 90px auto 20px;
 #colorpicker {
   height: 400px;
   width: 300px;
-  background-color: rgb(53, 53, 53);
+  background-color: white;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
