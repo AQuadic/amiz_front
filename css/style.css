@@ -248,7 +248,7 @@ height: 19.39px;
 /*end footer*/
 /* main*/
 .main{
-  background-image: url('../images/mainImg.webp');
+  background-image: url('../images/headerImg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
