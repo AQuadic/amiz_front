@@ -989,7 +989,7 @@ margin-bottom: 4px;
   color: #454545;
 font-size: 20px;
 }
-.dashboard_admin .dashboard-box .part1 .admin-edit{
+.dashboard_admin .dashboard-box  .admin-edit{
   width: 36px;
 height: 36px;
 min-width: 36px;
@@ -1000,7 +1000,7 @@ align-items: center;
 justify-content: center;
 border: none;
 }
-.dashboard_admin .dashboard-box .part1 .admin-edit img{
+.dashboard_admin .dashboard-box  .admin-edit img{
   width: 24px;
 height: 24px;
 }
@@ -1061,7 +1061,15 @@ font-family: "DM Sans3";
   display: flex;
   align-items: center;
   gap: 8px;
-  
+  justify-content: space-between;
+  min-width:  48%;
+  width:  46%;
+}
+.dashboard_admin .dashboard-box .part2 .players li .information_Player{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
   min-width:  48%;
   width:  46%;
 }
@@ -1202,6 +1210,25 @@ margin-bottom: 12px;
   margin: auto;
   display: block;
  }
+ .dashboard_admin .btn_Player{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ }
+ .dashboard_admin .dashboard-box .part2 .admin-edit {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 0px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.dashboard_admin .dashboard-box .part2 .admin-edit img{
+  width: 100%;
+}
 @media(max-width:768px){
   .dashboard_admin .dashboard-box .part2 .players {
    
